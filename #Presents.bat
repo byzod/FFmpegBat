@@ -93,9 +93,9 @@ GOTO END
 echo [96m[Concat][0m
 echo [93mConcat don't use drag drop files, place them All in [96mConcat[93m folder[0m
 pause
-REM (for %%i in (Concat\*.*) do @echo file '%%i') > Concat\Concat.txt
-ffmpeg  -i Concat\Concat.txt  -f concat  -safe 0  -c copy  output_concat.mp4
-REM del Concat\Concat.txt
+(for %%i in (Concat\*.*) do @echo file '%%i') > Concat.txt
+ffmpeg  -f concat  -safe 0  -i Concat.txt  -c copy  output_concat.mp4
+del Concat.txt
 GOTO END
 
 
