@@ -368,7 +368,7 @@ if defined filePath (
 			-ss %%i  ^
 			-to %%j  ^
 			-c copy  ^
-			"Concat\%fileName%_!ct!%fileExt%"
+			"Concat\!ct!%fileExt%"
 	)
 	endlocal
 	
